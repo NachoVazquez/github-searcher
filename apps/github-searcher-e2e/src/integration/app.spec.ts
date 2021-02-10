@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('github-user-searcher', () => {
+describe('github-searcher', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
@@ -8,6 +8,6 @@ describe('github-user-searcher', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to github-user-searcher!');
+    getGreeting().contains('Welcome to github-searcher!');
   });
 });

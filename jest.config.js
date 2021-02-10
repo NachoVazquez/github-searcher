@@ -1,7 +1,7 @@
 module.exports = {
   projects: [
-    '<rootDir>/apps/github-user-searcher',
-    '<rootDir>/libs/github-user-searcher/shell',
-    '<rootDir>/libs/github-user-searcher/user-search/shell',
+    '<rootDir>/apps/github-searcher',
+    '<rootDir>/libs/github-searcher/shell',
+    '<rootDir>/libs/github-searcher/user-search/shell',
   ],
 };

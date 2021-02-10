@@ -1,5 +1,5 @@
 {
-  "npmScope": "github-user-searcher",
+  "npmScope": "github-searcher",
   "affected": { "defaultBase": "main" },
   "implicitDependencies": {
     "workspace.json": "*",
@@ -21,20 +21,16 @@
     }
   },
   "projects": {
-    "github-user-searcher": { "tags": [] },
-    "github-user-searcher-e2e": {
+    "github-searcher": { "tags": [] },
+    "github-searcher-e2e": {
       "tags": [],
-      "implicitDependencies": ["github-user-searcher"]
+      "implicitDependencies": ["github-searcher"]
     },
-    "github-user-searcher-shell": {
-      "tags": ["type:feature-shell", "scope: github-user-searcher"]
+    "github-searcher-shell": {
+      "tags": ["type:feature-shell", "scope: github-searcher"]
     },
-    "github-user-searcher-user-search-shell": {
-      "tags": [
-        "type:shell",
-        "scope: github-user-searcher",
-        "scope: user-search"
-      ]
+    "github-searcher-user-search-shell": {
+      "tags": ["type:shell", "scope: github-searcher", "scope: user-search"]
     }
   }
 }

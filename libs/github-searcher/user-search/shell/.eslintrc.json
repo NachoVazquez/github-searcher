@@ -9,16 +9,14 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "parserOptions": {
-        "project": [
-          "libs/github-user-searcher/user-search/shell/tsconfig.*?.json"
-        ]
+        "project": ["libs/github-searcher/user-search/shell/tsconfig.*?.json"]
       },
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
           {
             "type": "attribute",
-            "prefix": "github-user-searcher",
+            "prefix": "github-searcher",
             "style": "camelCase"
           }
         ],
@@ -26,7 +24,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "github-user-searcher",
+            "prefix": "github-searcher",
             "style": "kebab-case"
           }
         ]

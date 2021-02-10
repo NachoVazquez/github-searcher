@@ -1,34 +1,34 @@
 {
   "version": 2,
   "projects": {
-    "github-user-searcher": {
+    "github-searcher": {
       "projectType": "application",
-      "root": "apps/github-user-searcher",
-      "sourceRoot": "apps/github-user-searcher/src",
-      "prefix": "github-user-searcher",
+      "root": "apps/github-searcher",
+      "sourceRoot": "apps/github-searcher/src",
+      "prefix": "github-searcher",
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/github-user-searcher",
-            "index": "apps/github-user-searcher/src/index.html",
-            "main": "apps/github-user-searcher/src/main.ts",
-            "polyfills": "apps/github-user-searcher/src/polyfills.ts",
-            "tsConfig": "apps/github-user-searcher/tsconfig.app.json",
+            "outputPath": "dist/apps/github-searcher",
+            "index": "apps/github-searcher/src/index.html",
+            "main": "apps/github-searcher/src/main.ts",
+            "polyfills": "apps/github-searcher/src/polyfills.ts",
+            "tsConfig": "apps/github-searcher/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "apps/github-user-searcher/src/favicon.ico",
-              "apps/github-user-searcher/src/assets"
+              "apps/github-searcher/src/favicon.ico",
+              "apps/github-searcher/src/assets"
             ],
-            "styles": ["apps/github-user-searcher/src/styles.scss"],
+            "styles": ["apps/github-searcher/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/github-user-searcher/src/environments/environment.ts",
-                  "with": "apps/github-user-searcher/src/environments/environment.prod.ts"
+                  "replace": "apps/github-searcher/src/environments/environment.ts",
+                  "with": "apps/github-searcher/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -56,110 +56,110 @@
         "serve": {
           "executor": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "github-user-searcher:build"
+            "browserTarget": "github-searcher:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "github-user-searcher:build:production"
+              "browserTarget": "github-searcher:build:production"
             }
           }
         },
         "extract-i18n": {
           "executor": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "github-user-searcher:build"
+            "browserTarget": "github-searcher:build"
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/github-user-searcher/src/**/*.ts",
-              "apps/github-user-searcher/src/**/*.html"
+              "apps/github-searcher/src/**/*.ts",
+              "apps/github-searcher/src/**/*.html"
             ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/github-user-searcher"],
+          "outputs": ["coverage/apps/github-searcher"],
           "options": {
-            "jestConfig": "apps/github-user-searcher/jest.config.js",
+            "jestConfig": "apps/github-searcher/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "github-user-searcher-e2e": {
-      "root": "apps/github-user-searcher-e2e",
-      "sourceRoot": "apps/github-user-searcher-e2e/src",
+    "github-searcher-e2e": {
+      "root": "apps/github-searcher-e2e",
+      "sourceRoot": "apps/github-searcher-e2e/src",
       "projectType": "application",
       "targets": {
         "e2e": {
           "executor": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/github-user-searcher-e2e/cypress.json",
-            "tsConfig": "apps/github-user-searcher-e2e/tsconfig.e2e.json",
-            "devServerTarget": "github-user-searcher:serve"
+            "cypressConfig": "apps/github-searcher-e2e/cypress.json",
+            "tsConfig": "apps/github-searcher-e2e/tsconfig.e2e.json",
+            "devServerTarget": "github-searcher:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "github-user-searcher:serve:production"
+              "devServerTarget": "github-searcher:serve:production"
             }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/github-user-searcher-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["apps/github-searcher-e2e/**/*.{js,ts}"]
           }
         }
       }
     },
-    "github-user-searcher-shell": {
+    "github-searcher-shell": {
       "projectType": "library",
-      "root": "libs/github-user-searcher/shell",
-      "sourceRoot": "libs/github-user-searcher/shell/src",
-      "prefix": "github-user-searcher",
+      "root": "libs/github-searcher/shell",
+      "sourceRoot": "libs/github-searcher/shell/src",
+      "prefix": "github-searcher",
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/github-user-searcher/shell/src/**/*.ts",
-              "libs/github-user-searcher/shell/src/**/*.html"
+              "libs/github-searcher/shell/src/**/*.ts",
+              "libs/github-searcher/shell/src/**/*.html"
             ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-user-searcher/shell"],
+          "outputs": ["coverage/libs/github-searcher/shell"],
           "options": {
-            "jestConfig": "libs/github-user-searcher/shell/jest.config.js",
+            "jestConfig": "libs/github-searcher/shell/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "github-user-searcher-user-search-shell": {
+    "github-searcher-user-search-shell": {
       "projectType": "library",
-      "root": "libs/github-user-searcher/user-search/shell",
-      "sourceRoot": "libs/github-user-searcher/user-search/shell/src",
-      "prefix": "github-user-searcher",
+      "root": "libs/github-searcher/user-search/shell",
+      "sourceRoot": "libs/github-searcher/user-search/shell/src",
+      "prefix": "github-searcher",
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/github-user-searcher/user-search/shell/src/**/*.ts",
-              "libs/github-user-searcher/user-search/shell/src/**/*.html"
+              "libs/github-searcher/user-search/shell/src/**/*.ts",
+              "libs/github-searcher/user-search/shell/src/**/*.html"
             ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-user-searcher/user-search/shell"],
+          "outputs": ["coverage/libs/github-searcher/user-search/shell"],
           "options": {
-            "jestConfig": "libs/github-user-searcher/user-search/shell/jest.config.js",
+            "jestConfig": "libs/github-searcher/user-search/shell/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -189,5 +189,5 @@
       "style": "scss"
     }
   },
-  "defaultProject": "github-user-searcher"
+  "defaultProject": "github-searcher"
 }

@@ -122,8 +122,8 @@ jobs:
         run: yarn affected:build --base=$BASE_BRANCH
       - uses: actions/upload-artifact@v2
         with:
-          name: github-user-searcher
-          path: dist/apps/github-user-searcher
+          name: github-searcher
+          path: dist/apps/github-searcher
           if-no-files-found: warn
 
   e2e:

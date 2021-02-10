@@ -15,11 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@github-user-searcher/github-user-searcher/shell": [
-        "libs/github-user-searcher/shell/src/index.ts"
+      "@github-searcher/github-searcher/shell": [
+        "libs/github-searcher/shell/src/index.ts"
       ],
-      "@github-user-searcher/github-user-searcher/user-search/shell": [
-        "libs/github-user-searcher/user-search/shell/src/index.ts"
+      "@github-searcher/github-searcher/user-search/shell": [
+        "libs/github-searcher/user-search/shell/src/index.ts"
       ]
     }
   },
