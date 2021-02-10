@@ -25,6 +25,16 @@
     "github-user-searcher-e2e": {
       "tags": [],
       "implicitDependencies": ["github-user-searcher"]
+    },
+    "github-user-searcher-shell": {
+      "tags": ["type:feature-shell", "scope: github-user-searcher"]
+    },
+    "github-user-searcher-user-search-shell": {
+      "tags": [
+        "type:shell",
+        "scope: github-user-searcher",
+        "scope: user-search"
+      ]
     }
   }
 }
