@@ -40,15 +40,14 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ env.NODE_LATEST }}-yarn-${{ hashFiles('yarn.lock') }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-${{ env.NODE_LATEST }}-yarn-
-      - run: yarn install
-
+            ${{ runner.os }}-yarn-
+      - run: yarn install --non-interactive --silent
       - if: github.event_name == 'push'
         run: yarn lint
       - if: github.event_name == 'pull_request'
-        run: yarn affected:lint -- --base=$BASE_BRANCH
+        run: yarn affected:lint --base=$BASE_BRANCH
 
   test:
     runs-on: ubuntu-20.04
@@ -77,15 +76,14 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ env.NODE_LATEST }}-yarn-${{ hashFiles('yarn.lock') }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-${{ env.NODE_LATEST }}-yarn-
-      - run: yarn install
-
+            ${{ runner.os }}-yarn-
+      - run: yarn install --non-interactive --silent
       - if: github.event_name == 'push'
         run: yarn test
       - if: github.event_name == 'pull_request'
-        run: yarn affected:test -- --base=$BASE_BRANCH
+        run: yarn affected:test --base=$BASE_BRANCH
 
   build:
     runs-on: ubuntu-20.04
@@ -114,15 +112,14 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ env.NODE_LATEST }}-yarn-${{ hashFiles('yarn.lock') }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-${{ env.NODE_LATEST }}-yarn-
-      - run: yarn install
-
+            ${{ runner.os }}-yarn-
+      - run: yarn install --non-interactive --silent
       - if: github.event_name == 'push'
         run: yarn build
       - if: github.event_name == 'pull_request'
-        run: yarn affected:build -- --base=$BASE_BRANCH
+        run: yarn affected:build --base=$BASE_BRANCH
       - uses: actions/upload-artifact@v2
         with:
           name: github-user-searcher
@@ -156,9 +153,8 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ env.NODE_LATEST }}-yarn-${{ hashFiles('yarn.lock') }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-${{ env.NODE_LATEST }}-yarn-
-      - run: yarn install
-
+            ${{ runner.os }}-yarn-
+      - run: yarn install --non-interactive --silent
       - run: yarn e2e
