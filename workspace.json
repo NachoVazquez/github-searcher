@@ -20,9 +20,7 @@
               "apps/github-user-searcher/src/favicon.ico",
               "apps/github-user-searcher/src/assets"
             ],
-            "styles": [
-              "apps/github-user-searcher/src/styles.scss"
-            ],
+            "styles": ["apps/github-user-searcher/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -83,9 +81,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/github-user-searcher"
-          ],
+          "outputs": ["coverage/apps/github-user-searcher"],
           "options": {
             "jestConfig": "apps/github-user-searcher/jest.config.js",
             "passWithNoTests": true
@@ -114,9 +110,7 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/github-user-searcher-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/github-user-searcher-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -130,14 +124,18 @@
       "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
+      "e2eTestRunner": "cypress",
+      "strict": true
     },
     "@nrwl/angular:library": {
-      "style": "scss",
       "linter": "eslint",
+      "strict": true,
+      "style": "scss",
       "unitTestRunner": "jest"
     },
     "@nrwl/angular:component": {
+      "displayBlock": true,
+      "skipTests": true,
       "style": "scss"
     }
   },
