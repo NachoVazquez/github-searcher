@@ -1,14 +1,9 @@
 {
   "npmScope": "github-user-searcher",
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -19,16 +14,17 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "accessToken": "ZjAwOTdhNGItZjk3YS00NjM1LWI3ODQtYTBjZWI1M2VhYTk5fHJlYWQtd3JpdGU=",
-        "cacheableOperations": [
-          "build",
-          "test",
-          "lint",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "github-user-searcher": { "tags": [] },
+    "github-user-searcher-e2e": {
+      "tags": [],
+      "implicitDependencies": ["github-user-searcher"]
+    }
+  }
 }
