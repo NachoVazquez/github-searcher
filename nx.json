@@ -37,6 +37,9 @@
     },
     "github-searcher-user-search-ui-user-search": {
       "tags": ["type:ui", "scope: github-searcher", "scope: user-search"]
+    },
+    "github-searcher-user-search-ui-search-bar": {
+      "tags": ["type:ui", "scope: github-searcher", "scope: user-search"]
     }
   }
 }
