@@ -32,6 +32,9 @@
       ],
       "@github-searcher/github-searcher/user-search/data-access": [
         "libs/github-searcher/user-search/data-access/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/user-search/feature-search-filters": [
+        "libs/github-searcher/user-search/feature-search-filters/src/index.ts"
       ]
     }
   },
