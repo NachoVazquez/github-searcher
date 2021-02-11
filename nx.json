@@ -83,6 +83,12 @@
     },
     "github-searcher-user-search-feature-search-results": {
       "tags": ["type: feature", "scope: github-searcher", "scope: user-search"]
+    },
+    "github-searcher-user-search-feature-user-list": {
+      "tags": ["type: feature", "scope: github-searcher", "scope: user-search"]
+    },
+    "github-searcher-user-search-ui-user-list": {
+      "tags": ["type: ui", "scope: github-searcher", "scope: user-search"]
     }
   }
 }
