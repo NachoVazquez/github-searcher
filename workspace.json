@@ -245,6 +245,31 @@
           }
         }
       }
+    },
+    "github-searcher-user-search-data-access": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/data-access",
+      "sourceRoot": "libs/github-searcher/user-search/data-access/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/data-access/src/**/*.ts",
+              "libs/github-searcher/user-search/data-access/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-searcher/user-search/data-access"],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

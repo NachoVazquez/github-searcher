@@ -40,6 +40,13 @@
     },
     "github-searcher-user-search-ui-search-bar": {
       "tags": ["type:ui", "scope: github-searcher", "scope: user-search"]
+    },
+    "github-searcher-user-search-data-access": {
+      "tags": [
+        "type:data-access",
+        "scope: github-searcher",
+        "scope: user-search"
+      ]
     }
   }
 }

@@ -29,6 +29,9 @@
       ],
       "@github-searcher/github-searcher/user-search/ui-search-bar": [
         "libs/github-searcher/user-search/ui-search-bar/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/user-search/data-access": [
+        "libs/github-searcher/user-search/data-access/src/index.ts"
       ]
     }
   },
