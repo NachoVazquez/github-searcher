@@ -20,6 +20,9 @@
       ],
       "@github-searcher/github-searcher/user-search/shell": [
         "libs/github-searcher/user-search/shell/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/user-search/feature-search-bar": [
+        "libs/github-searcher/user-search/feature-search-bar/src/index.ts"
       ]
     }
   },

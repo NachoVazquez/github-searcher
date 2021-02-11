@@ -31,6 +31,9 @@
     },
     "github-searcher-user-search-shell": {
       "tags": ["type:shell", "scope: github-searcher", "scope: user-search"]
+    },
+    "github-searcher-user-search-feature-search-bar": {
+      "tags": ["type:feature", "scope: github-searcher", "scope: user-search"]
     }
   }
 }
