@@ -78,6 +78,9 @@
     },
     "github-searcher-shared-assets": {
       "tags": ["type:assets", "scope:github-searcher", "scope:shared"]
+    },
+    "github-searcher-shared-styles": {
+      "tags": ["type:styles", "scope:github-searcher", "scope:shared"]
     }
   }
 }
