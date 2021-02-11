@@ -12,7 +12,67 @@
             "enforceBuildableLibDependency": true,
             "allow": [],
             "depConstraints": [
-              { "sourceTag": "*", "onlyDependOnLibsWithTags": ["*"] }
+              {
+                "sourceTag": "scope:shared",
+                "onlyDependOnLibsWithTags": ["scope:shared"]
+              },
+              {
+                "sourceTag": "scope:core",
+                "onlyDependOnLibsWithTags": ["scope:core", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:github-searcher",
+                "onlyDependOnLibsWithTags": [
+                  "scope:github-searcher",
+                  "scope:shared"
+                ]
+              },
+              {
+                "sourceTag": "scope:user-search",
+                "onlyDependOnLibsWithTags": [
+                  "scope:user-search",
+                  "scope:shared"
+                ]
+              },
+              {
+                "sourceTag": "scope:layout",
+                "onlyDependOnLibsWithTags": ["scope:layout", "scope:shared"]
+              },
+              {
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": [
+                  "type:feature-shell",
+                  "type:environments"
+                ]
+              },
+              {
+                "sourceTag": "type:feature-shell",
+                "onlyDependOnLibsWithTags": ["type:shell", "type:feature"]
+              },
+              {
+                "sourceTag": "type:shell",
+                "onlyDependOnLibsWithTags": [
+                  "type:feature",
+                  "type:ui",
+                  "type:data-access "
+                ]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": [
+                  "type:feature",
+                  "type:ui",
+                  "type:data-access"
+                ]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:ui"]
+              },
+              {
+                "sourceTag": "type:data-access",
+                "onlyDependOnLibsWithTags": ["type:data-access"]
+              }
             ]
           }
         ]

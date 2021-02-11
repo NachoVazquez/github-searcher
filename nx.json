@@ -21,77 +21,60 @@
     }
   },
   "projects": {
-    "github-searcher": { "tags": [] },
+    "github-searcher": {
+      "tags": ["scope:github-searcher", "type:application"]
+    },
     "github-searcher-e2e": {
-      "tags": [],
+      "tags": ["scope:github-searcher", "type:e2e"],
       "implicitDependencies": ["github-searcher"]
     },
     "github-searcher-shell": {
-      "tags": ["type:feature-shell", "scope: github-searcher"]
+      "tags": ["type:feature-shell", "scope:github-searcher"]
     },
     "github-searcher-user-search-shell": {
-      "tags": ["type:shell", "scope: github-searcher", "scope: user-search"]
+      "tags": ["type:shell", "scope:github-searcher", "scope:user-search"]
     },
     "github-searcher-user-search-feature-search-bar": {
-      "tags": ["type:feature", "scope: github-searcher", "scope: user-search"]
+      "tags": ["type:feature", "scope:github-searcher", "scope:user-search"]
     },
     "github-searcher-user-search-ui-user-search": {
-      "tags": ["type:ui", "scope: github-searcher", "scope: user-search"]
+      "tags": ["type:ui", "scope:github-searcher", "scope:user-search"]
     },
     "github-searcher-user-search-ui-search-bar": {
-      "tags": ["type:ui", "scope: github-searcher", "scope: user-search"]
+      "tags": ["type:ui", "scope:github-searcher", "scope:user-search"]
     },
     "github-searcher-user-search-data-access": {
-      "tags": [
-        "type:data-access",
-        "scope: github-searcher",
-        "scope: user-search"
-      ]
+      "tags": ["type:data-access", "scope:github-searcher", "scope:user-search"]
     },
     "github-searcher-user-search-feature-search-filters": {
-      "tags": ["type:feature", "scope: github-searcher", "scope: user-search"]
+      "tags": ["type:feature", "scope:github-searcher", "scope:user-search"]
     },
     "github-searcher-user-search-ui-search-filters": {
-      "tags": ["type:ui", "scope: github-searcher", "scope: user-search"]
+      "tags": ["type:ui", "scope:github-searcher", "scope:user-search"]
     },
     "github-searcher-core-layout-ui-layout": {
-      "tags": [
-        "type:ui",
-        "scope: github-searcher",
-        "scope: core",
-        "scope:layout"
-      ]
+      "tags": ["type:ui", "scope:github-searcher", "scope:core", "scope:layout"]
     },
     "github-searcher-core-layout-ui-topbar": {
-      "tags": [
-        "type:ui",
-        "scope: github-searcher",
-        "scope: core",
-        "scope:layout"
-      ]
+      "tags": ["type:ui", "scope:github-searcher", "scope:core", "scope:layout"]
     },
     "github-searcher-core-layout-ui-content": {
-      "tags": [
-        "type:ui",
-        "scope: github-searcher",
-        "scope: core",
-        "scope:layout"
-      ]
+      "tags": ["type:ui", "scope:github-searcher", "scope:core", "scope:layout"]
     },
     "github-searcher-user-search-ui-search-results": {
-      "tags": ["type:ui", "scope: github-searcher", "scope: user-search"]
+      "tags": ["type:ui", "scope:github-searcher", "scope:user-search"]
     },
     "github-searcher-user-search-feature-search-results": {
-      "tags": ["type: feature", "scope: github-searcher", "scope: user-search"]
+      "tags": ["type:feature", "scope:github-searcher", "scope:user-search"]
     },
     "github-searcher-user-search-feature-user-list": {
-      "tags": ["type: feature", "scope: github-searcher", "scope: user-search"]
+      "tags": ["type:feature", "scope:github-searcher", "scope:user-search"]
     },
     "github-searcher-user-search-ui-user-list": {
-      "tags": ["type: ui", "scope: github-searcher", "scope: user-search"]
+      "tags": ["type:ui", "scope:github-searcher", "scope:user-search"]
     },
     "github-searcher-user-search-feature-search-pagination": {
-      "tags": ["type: feature", "scope: github-searcher", "scope: user-search"]
+      "tags": ["type:feature", "scope:github-searcher", "scope:user-search"]
     }
   }
 }
