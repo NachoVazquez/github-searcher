@@ -47,6 +47,9 @@
       ],
       "@github-searcher/github-searcher/core/layout/ui-content": [
         "libs/github-searcher/core/layout/ui-content/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/user-search/ui-search-results": [
+        "libs/github-searcher/user-search/ui-search-results/src/index.ts"
       ]
     }
   },

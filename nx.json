@@ -77,6 +77,9 @@
         "scope: core",
         "scope:layout"
       ]
+    },
+    "github-searcher-user-search-ui-search-results": {
+      "tags": ["type:ui", "scope: github-searcher", "scope: user-search"]
     }
   }
 }
