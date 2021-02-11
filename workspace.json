@@ -505,6 +505,33 @@
           }
         }
       }
+    },
+    "github-searcher-user-search-feature-search-pagination": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/feature-search-pagination",
+      "sourceRoot": "libs/github-searcher/user-search/feature-search-pagination/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/feature-search-pagination/src/**/*.ts",
+              "libs/github-searcher/user-search/feature-search-pagination/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/github-searcher/user-search/feature-search-pagination"
+          ],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/feature-search-pagination/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

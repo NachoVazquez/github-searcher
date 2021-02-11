@@ -59,6 +59,9 @@
       ],
       "@github-searcher/github-searcher/user-search/ui-user-list": [
         "libs/github-searcher/user-search/ui-user-list/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/user-search/feature-search-pagination": [
+        "libs/github-searcher/user-search/feature-search-pagination/src/index.ts"
       ]
     }
   },

@@ -16,5 +16,6 @@ module.exports = {
     '<rootDir>/libs/github-searcher/user-search/feature-search-results',
     '<rootDir>/libs/github-searcher/user-search/feature-user-list',
     '<rootDir>/libs/github-searcher/user-search/ui-user-list',
+    '<rootDir>/libs/github-searcher/user-search/feature-search-pagination',
   ],
 };
