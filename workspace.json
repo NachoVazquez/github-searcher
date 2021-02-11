@@ -297,6 +297,33 @@
           }
         }
       }
+    },
+    "github-searcher-user-search-ui-search-filters": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/ui-search-filters",
+      "sourceRoot": "libs/github-searcher/user-search/ui-search-filters/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/ui-search-filters/src/**/*.ts",
+              "libs/github-searcher/user-search/ui-search-filters/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/github-searcher/user-search/ui-search-filters"
+          ],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/ui-search-filters/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

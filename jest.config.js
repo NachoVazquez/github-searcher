@@ -8,5 +8,6 @@ module.exports = {
     '<rootDir>/libs/github-searcher/user-search/ui-search-bar',
     '<rootDir>/libs/github-searcher/user-search/data-access',
     '<rootDir>/libs/github-searcher/user-search/feature-search-filters',
+    '<rootDir>/libs/github-searcher/user-search/ui-search-filters',
   ],
 };
