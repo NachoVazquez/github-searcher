@@ -38,6 +38,15 @@
       ],
       "@github-searcher/github-searcher/user-search/ui-search-filters": [
         "libs/github-searcher/user-search/ui-search-filters/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/core/layout/ui-layout": [
+        "libs/github-searcher/core/layout/ui-layout/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/core/layout/ui-topbar": [
+        "libs/github-searcher/core/layout/ui-topbar/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/core/layout/ui-content": [
+        "libs/github-searcher/core/layout/ui-content/src/index.ts"
       ]
     }
   },
