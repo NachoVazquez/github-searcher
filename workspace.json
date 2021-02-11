@@ -35,8 +35,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/github-searcher/src/environments/environment.ts",
-                  "with": "apps/github-searcher/src/environments/environment.prod.ts"
+                  "replace": "libs/github-searcher/shared/environments/src/lib/environment.ts",
+                  "with": "libs/github-searcher/shared/environments/src/lib/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -552,6 +552,31 @@
       "root": "libs/github-searcher/shared/styles",
       "sourceRoot": "libs/github-searcher/shared/styles/src",
       "prefix": "github-searcher"
+    },
+    "github-searcher-shared-environments": {
+      "projectType": "library",
+      "root": "libs/github-searcher/shared/environments",
+      "sourceRoot": "libs/github-searcher/shared/environments/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/shared/environments/src/**/*.ts",
+              "libs/github-searcher/shared/environments/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-searcher/shared/environments"],
+          "options": {
+            "jestConfig": "libs/github-searcher/shared/environments/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

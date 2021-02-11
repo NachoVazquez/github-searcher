@@ -19,5 +19,6 @@ module.exports = {
     '<rootDir>/libs/github-searcher/user-search/feature-search-pagination',
     '<rootDir>/libs/github-searcher/shared/assets',
     '<rootDir>/libs/github-searcher/shared/styles',
+    '<rootDir>/libs/github-searcher/shared/environments',
   ],
 };

@@ -68,6 +68,9 @@
       ],
       "@github-searcher/github-searcher/shared/styles": [
         "libs/github-searcher/shared/styles/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/shared/environments": [
+        "libs/github-searcher/shared/environments/src/index.ts"
       ]
     }
   },

@@ -81,6 +81,9 @@
     },
     "github-searcher-shared-styles": {
       "tags": ["type:styles", "scope:github-searcher", "scope:shared"]
+    },
+    "github-searcher-shared-environments": {
+      "tags": ["type:environments", "scope:github-searcher", "scope:shared"]
     }
   }
 }
