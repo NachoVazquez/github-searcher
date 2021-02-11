@@ -71,6 +71,9 @@
       ],
       "@github-searcher/github-searcher/shared/environments": [
         "libs/github-searcher/shared/environments/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/core/data-access": [
+        "libs/github-searcher/core/data-access/src/index.ts"
       ]
     }
   },
