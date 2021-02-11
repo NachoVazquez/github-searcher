@@ -62,6 +62,9 @@
       ],
       "@github-searcher/github-searcher/user-search/feature-search-pagination": [
         "libs/github-searcher/user-search/feature-search-pagination/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/shared/assets": [
+        "libs/github-searcher/shared/assets/src/index.ts"
       ]
     }
   },

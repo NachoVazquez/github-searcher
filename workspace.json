@@ -17,8 +17,16 @@
             "tsConfig": "apps/github-searcher/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "apps/github-searcher/src/favicon.ico",
-              "apps/github-searcher/src/assets"
+              {
+                "glob": "favicon.ico",
+                "input": "libs/github-searcher/shared/assets/src",
+                "output": "./"
+              },
+              {
+                "glob": "**/*",
+                "input": "libs/github-searcher/shared/assets/src/assets",
+                "output": "assets"
+              }
             ],
             "styles": ["apps/github-searcher/src/styles.scss"],
             "scripts": []
@@ -532,6 +540,13 @@
           }
         }
       }
+    },
+    "github-searcher-shared-assets": {
+      "projectType": "library",
+      "root": "libs/github-searcher/shared/assets",
+      "sourceRoot": "libs/github-searcher/shared/assets/src",
+      "prefix": "github-searcher",
+      "targets": {}
     }
   },
   "cli": {

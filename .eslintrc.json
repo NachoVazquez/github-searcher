@@ -67,7 +67,7 @@
               },
               {
                 "sourceTag": "type:ui",
-                "onlyDependOnLibsWithTags": ["type:ui"]
+                "onlyDependOnLibsWithTags": ["type:ui", "type:assets"]
               },
               {
                 "sourceTag": "type:data-access",
