@@ -39,9 +39,6 @@
       "@github-searcher/github-searcher/user-search/ui-search-filters": [
         "libs/github-searcher/user-search/ui-search-filters/src/index.ts"
       ],
-      "@github-searcher/github-searcher/core/layout/ui-layout": [
-        "libs/github-searcher/core/layout/ui-layout/src/index.ts"
-      ],
       "@github-searcher/github-searcher/user-search/ui-search-results": [
         "libs/github-searcher/user-search/ui-search-results/src/index.ts"
       ],
@@ -68,6 +65,9 @@
       ],
       "@github-searcher/github-searcher/core/data-access": [
         "libs/github-searcher/core/data-access/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/core/ui-layout": [
+        "libs/github-searcher/core/ui-layout/src/index.ts"
       ]
     }
   },

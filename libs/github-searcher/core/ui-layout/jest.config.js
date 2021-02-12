@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'github-searcher-core-layout-ui-layout',
-  preset: '../../../../../jest.preset.js',
+  displayName: 'github-searcher-core-ui-layout',
+  preset: '../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -14,8 +14,7 @@ module.exports = {
       },
     },
   },
-  coverageDirectory:
-    '../../../../../coverage/libs/github-searcher/core/layout/ui-layout',
+  coverageDirectory: '../../../../coverage/libs/github-searcher/core/ui-layout',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',

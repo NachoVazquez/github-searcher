@@ -1,9 +1,14 @@
 {
   "npmScope": "github-searcher",
-  "affected": { "defaultBase": "main" },
+  "affected": {
+    "defaultBase": "main"
+  },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -30,9 +35,6 @@
     },
     "github-searcher-core-data-access": {
       "tags": ["type:data-access", "scope:github-searcher", "scope:core"]
-    },
-    "github-searcher-core-layout-ui-layout": {
-      "tags": ["type:ui", "scope:github-searcher", "scope:core", "scope:layout"]
     },
     "github-searcher-e2e": {
       "tags": ["scope:github-searcher", "type:e2e"],
@@ -85,6 +87,9 @@
     },
     "github-searcher-user-search-ui-user-search": {
       "tags": ["type:ui", "scope:github-searcher", "scope:user-search"]
+    },
+    "github-searcher-core-ui-layout": {
+      "tags": ["type:ui", "scope:github-searcher", "scope:core", "scope:layout"]
     }
   }
 }
