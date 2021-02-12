@@ -6,5 +6,6 @@ import { SearchBarUiComponent } from './search-bar-ui/search-bar-ui.component';
 @NgModule({
   imports: [CommonModule],
   declarations: [SearchBarUiComponent],
+  exports: [SearchBarUiComponent],
 })
 export class GithubSearcherUserSearchUiSearchBarModule {}

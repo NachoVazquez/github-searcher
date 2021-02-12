@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'github-searcher-user-search-ui-user-search',
+  displayName: 'github-searcher-user-search-feature-user-search',
   preset: '../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -15,7 +15,7 @@ module.exports = {
     },
   },
   coverageDirectory:
-    '../../../../coverage/libs/github-searcher/user-search/ui-user-search',
+    '../../../../coverage/libs/github-searcher/user-search/feature-user-search',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',

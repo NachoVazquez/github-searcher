@@ -6,5 +6,6 @@ import { SearchFiltersUiComponent } from './search-filters-ui/search-filters-ui.
 @NgModule({
   imports: [CommonModule],
   declarations: [SearchFiltersUiComponent],
+  exports: [SearchFiltersUiComponent],
 })
 export class GithubSearcherUserSearchUiSearchFiltersModule {}

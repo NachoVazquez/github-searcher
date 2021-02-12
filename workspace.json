@@ -506,33 +506,6 @@
         }
       }
     },
-    "github-searcher-user-search-ui-user-search": {
-      "projectType": "library",
-      "root": "libs/github-searcher/user-search/ui-user-search",
-      "sourceRoot": "libs/github-searcher/user-search/ui-user-search/src",
-      "prefix": "github-searcher",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-searcher/user-search/ui-user-search/src/**/*.ts",
-              "libs/github-searcher/user-search/ui-user-search/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/github-searcher/user-search/ui-user-search"
-          ],
-          "options": {
-            "jestConfig": "libs/github-searcher/user-search/ui-user-search/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "github-searcher-core-ui-layout": {
       "projectType": "library",
       "root": "libs/github-searcher/core/ui-layout",
@@ -578,6 +551,33 @@
           "outputs": ["coverage/libs/shared/utils-router"],
           "options": {
             "jestConfig": "libs/shared/utils-router/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "github-searcher-user-search-feature-user-search": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/feature-user-search",
+      "sourceRoot": "libs/github-searcher/user-search/feature-user-search/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/feature-user-search/src/**/*.ts",
+              "libs/github-searcher/user-search/feature-user-search/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/github-searcher/user-search/feature-user-search"
+          ],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/feature-user-search/jest.config.js",
             "passWithNoTests": true
           }
         }

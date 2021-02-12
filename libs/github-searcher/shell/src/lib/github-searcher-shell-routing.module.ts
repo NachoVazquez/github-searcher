@@ -5,15 +5,15 @@ import { SelectivePreloadingStrategyService } from '@github-searcher/shared/util
 
 export const rootRoutes: Route[] = [
   {
-    path: 'user-search',
+    path: 'users',
     loadChildren: () =>
       import('@github-searcher/github-searcher/user-search/shell').then(
         m => m.GithubSearcherUserSearchShellModule
       ),
     data: { preload: true },
   },
-  { path: '', redirectTo: '/user-search', pathMatch: 'full' },
-  { path: '**', redirectTo: '/user-search', pathMatch: 'full' },
+  { path: '', redirectTo: '/users', pathMatch: 'full' },
+  { path: '**', redirectTo: '/users', pathMatch: 'full' },
 ];
 
 @NgModule({

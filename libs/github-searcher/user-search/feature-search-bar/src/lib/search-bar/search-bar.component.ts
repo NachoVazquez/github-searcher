@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'github-searcher-search-bar',
-  templateUrl: './search-bar.component.html',
-  styleUrls: ['./search-bar.component.scss'],
+  template: `<github-searcher-search-bar-ui></github-searcher-search-bar-ui>`,
 })
 export class SearchBarComponent {}

@@ -6,5 +6,6 @@ import { SearchPaginationComponent } from './search-pagination/search-pagination
 @NgModule({
   imports: [CommonModule],
   declarations: [SearchPaginationComponent],
+  exports: [SearchPaginationComponent],
 })
 export class GithubSearcherUserSearchFeatureSearchPaginationModule {}
