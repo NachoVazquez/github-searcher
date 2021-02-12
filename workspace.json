@@ -557,6 +557,31 @@
           }
         }
       }
+    },
+    "shared-utils-router": {
+      "projectType": "library",
+      "root": "libs/shared/utils-router",
+      "sourceRoot": "libs/shared/utils-router/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/utils-router/src/**/*.ts",
+              "libs/shared/utils-router/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/utils-router"],
+          "options": {
+            "jestConfig": "libs/shared/utils-router/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

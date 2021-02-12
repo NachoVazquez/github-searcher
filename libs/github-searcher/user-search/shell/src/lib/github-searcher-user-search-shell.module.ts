@@ -1,7 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { GithubSearcherUserSearchShellRoutingModule } from './github-searcher-user-search-shell-routing.module';
+
 @NgModule({
-  imports: [CommonModule],
+  imports: [GithubSearcherUserSearchShellRoutingModule],
 })
 export class GithubSearcherUserSearchShellModule {}

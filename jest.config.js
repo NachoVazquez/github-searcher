@@ -21,5 +21,6 @@ module.exports = {
     '<rootDir>/libs/github-searcher/shared/styles',
     '<rootDir>/libs/github-searcher/shared/environments',
     '<rootDir>/libs/github-searcher/core/data-access',
+    '<rootDir>/libs/shared/utils-router',
   ],
 };
