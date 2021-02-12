@@ -10,7 +10,7 @@
       ],
       "parserOptions": {
         "project": [
-          "libs/github-searcher/user-search/ui-user-search/tsconfig.*?.json"
+          "libs/github-searcher/user-search/feature-user-search/tsconfig.*?.json"
         ]
       },
       "rules": {
