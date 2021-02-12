@@ -11,5 +11,5 @@ export const loadUserSearchSuccess = createAction(
 
 export const loadUserSearchFailure = createAction(
   '[UserSearch/API] Load UserSearch Failure',
-  props<{ error: unknown }>()
+  props<{ error: string | null }>()
 );

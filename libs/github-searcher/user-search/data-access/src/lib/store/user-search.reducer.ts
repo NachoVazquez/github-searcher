@@ -7,7 +7,7 @@ import { UserSearchEntity } from './user-search.models';
 export const USER_SEARCH_FEATURE_KEY = 'userSearch';
 
 export interface State extends EntityState<UserSearchEntity> {
-  selectedId: string | undefined; // which UserSearch record has been selected
+  selectedId?: string; // which UserSearch record has been selected
   loaded: boolean; // has the UserSearch list been loaded
   error?: string | null; // last known error (if any)
 }

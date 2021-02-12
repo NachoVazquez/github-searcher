@@ -51,6 +51,7 @@
                 "onlyDependOnLibsWithTags": [
                   "type:shell",
                   "type:feature",
+                  "type:ui",
                   "type:data-access"
                 ]
               },

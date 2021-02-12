@@ -28,7 +28,10 @@
                 "output": "assets"
               }
             ],
-            "styles": ["libs/github-searcher/shared/styles/src/index.scss"],
+            "styles": [
+              "libs/github-searcher/shared/styles/src/index.scss",
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css"
+            ],
             "scripts": []
           },
           "configurations": {
