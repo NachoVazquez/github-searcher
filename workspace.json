@@ -95,7 +95,11 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "implicitDependencies": [
+        "github-searcher-shared-assets",
+        "github-searcher-shared-styles"
+      ]
     },
     "github-searcher-e2e": {
       "root": "apps/github-searcher-e2e",

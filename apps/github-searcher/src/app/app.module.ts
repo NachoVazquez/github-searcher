@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { GithubSearcherShellModule } from '@github-searcher/github-searcher/shell';
