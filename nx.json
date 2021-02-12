@@ -1,14 +1,9 @@
 {
   "npmScope": "github-searcher",
-  "affected": {
-    "defaultBase": "main"
-  },
+  "affected": { "defaultBase": "main" },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -27,18 +22,16 @@
   },
   "projects": {
     "github-searcher": {
-      "tags": ["scope:github-searcher", "type:application"]
+      "tags": ["scope:github-searcher", "type:application"],
+      "implicitDependencies": [
+        "github-searcher-shared-assets",
+        "github-searcher-shared-styles"
+      ]
     },
     "github-searcher-core-data-access": {
       "tags": ["type:data-access", "scope:github-searcher", "scope:core"]
     },
-    "github-searcher-core-layout-ui-content": {
-      "tags": ["type:ui", "scope:github-searcher", "scope:core", "scope:layout"]
-    },
     "github-searcher-core-layout-ui-layout": {
-      "tags": ["type:ui", "scope:github-searcher", "scope:core", "scope:layout"]
-    },
-    "github-searcher-core-layout-ui-topbar": {
       "tags": ["type:ui", "scope:github-searcher", "scope:core", "scope:layout"]
     },
     "github-searcher-e2e": {

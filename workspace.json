@@ -66,9 +66,7 @@
         },
         "serve": {
           "executor": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "github-searcher:build"
-          },
+          "options": { "browserTarget": "github-searcher:build" },
           "configurations": {
             "production": {
               "browserTarget": "github-searcher:build:production"
@@ -77,9 +75,7 @@
         },
         "extract-i18n": {
           "executor": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "github-searcher:build"
-          }
+          "options": { "browserTarget": "github-searcher:build" }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -98,11 +94,7 @@
             "passWithNoTests": true
           }
         }
-      },
-      "implicitDependencies": [
-        "github-searcher-shared-assets",
-        "github-searcher-shared-styles"
-      ]
+      }
     },
     "github-searcher-core-data-access": {
       "projectType": "library",
@@ -129,31 +121,6 @@
         }
       }
     },
-    "github-searcher-core-layout-ui-content": {
-      "projectType": "library",
-      "root": "libs/github-searcher/core/layout/ui-content",
-      "sourceRoot": "libs/github-searcher/core/layout/ui-content/src",
-      "prefix": "github-searcher",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-searcher/core/layout/ui-content/src/**/*.ts",
-              "libs/github-searcher/core/layout/ui-content/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-searcher/core/layout/ui-content"],
-          "options": {
-            "jestConfig": "libs/github-searcher/core/layout/ui-content/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "github-searcher-core-layout-ui-layout": {
       "projectType": "library",
       "root": "libs/github-searcher/core/layout/ui-layout",
@@ -174,31 +141,6 @@
           "outputs": ["coverage/libs/github-searcher/core/layout/ui-layout"],
           "options": {
             "jestConfig": "libs/github-searcher/core/layout/ui-layout/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "github-searcher-core-layout-ui-topbar": {
-      "projectType": "library",
-      "root": "libs/github-searcher/core/layout/ui-topbar",
-      "sourceRoot": "libs/github-searcher/core/layout/ui-topbar/src",
-      "prefix": "github-searcher",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-searcher/core/layout/ui-topbar/src/**/*.ts",
-              "libs/github-searcher/core/layout/ui-topbar/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-searcher/core/layout/ui-topbar"],
-          "options": {
-            "jestConfig": "libs/github-searcher/core/layout/ui-topbar/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -613,9 +555,7 @@
       }
     }
   },
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
+  "cli": { "defaultCollection": "@nrwl/angular" },
   "generators": {
     "@nrwl/angular:application": {
       "style": "scss",
