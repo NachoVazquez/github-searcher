@@ -1,9 +1,10 @@
-import { environment } from '@github-searcher/github-searcher/shared/environments';
-import { routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
+import { EffectsModule } from '@ngrx/effects';
+import { NgModule } from '@angular/core';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
-import { NgModule } from '@angular/core';
-import { EffectsModule } from '@ngrx/effects';
+import { routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
+
+import { environment } from '@github-searcher/github-searcher/shared/environments';
 
 @NgModule({
   imports: [

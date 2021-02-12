@@ -101,237 +101,51 @@
         "github-searcher-shared-styles"
       ]
     },
-    "github-searcher-e2e": {
-      "root": "apps/github-searcher-e2e",
-      "sourceRoot": "apps/github-searcher-e2e/src",
-      "projectType": "application",
-      "targets": {
-        "e2e": {
-          "executor": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/github-searcher-e2e/cypress.json",
-            "tsConfig": "apps/github-searcher-e2e/tsconfig.e2e.json",
-            "devServerTarget": "github-searcher:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "github-searcher:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/github-searcher-e2e/**/*.{js,ts}"]
-          }
-        }
-      }
-    },
-    "github-searcher-shell": {
+    "github-searcher-core-data-access": {
       "projectType": "library",
-      "root": "libs/github-searcher/shell",
-      "sourceRoot": "libs/github-searcher/shell/src",
+      "root": "libs/github-searcher/core/data-access",
+      "sourceRoot": "libs/github-searcher/core/data-access/src",
       "prefix": "github-searcher",
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/github-searcher/shell/src/**/*.ts",
-              "libs/github-searcher/shell/src/**/*.html"
+              "libs/github-searcher/core/data-access/src/**/*.ts",
+              "libs/github-searcher/core/data-access/src/**/*.html"
             ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-searcher/shell"],
+          "outputs": ["coverage/libs/github-searcher/core/data-access"],
           "options": {
-            "jestConfig": "libs/github-searcher/shell/jest.config.js",
+            "jestConfig": "libs/github-searcher/core/data-access/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "github-searcher-user-search-shell": {
+    "github-searcher-core-layout-ui-content": {
       "projectType": "library",
-      "root": "libs/github-searcher/user-search/shell",
-      "sourceRoot": "libs/github-searcher/user-search/shell/src",
+      "root": "libs/github-searcher/core/layout/ui-content",
+      "sourceRoot": "libs/github-searcher/core/layout/ui-content/src",
       "prefix": "github-searcher",
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/github-searcher/user-search/shell/src/**/*.ts",
-              "libs/github-searcher/user-search/shell/src/**/*.html"
+              "libs/github-searcher/core/layout/ui-content/src/**/*.ts",
+              "libs/github-searcher/core/layout/ui-content/src/**/*.html"
             ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-searcher/user-search/shell"],
+          "outputs": ["coverage/libs/github-searcher/core/layout/ui-content"],
           "options": {
-            "jestConfig": "libs/github-searcher/user-search/shell/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "github-searcher-user-search-feature-search-bar": {
-      "projectType": "library",
-      "root": "libs/github-searcher/user-search/feature-search-bar",
-      "sourceRoot": "libs/github-searcher/user-search/feature-search-bar/src",
-      "prefix": "github-searcher",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-searcher/user-search/feature-search-bar/src/**/*.ts",
-              "libs/github-searcher/user-search/feature-search-bar/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/github-searcher/user-search/feature-search-bar"
-          ],
-          "options": {
-            "jestConfig": "libs/github-searcher/user-search/feature-search-bar/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "github-searcher-user-search-ui-user-search": {
-      "projectType": "library",
-      "root": "libs/github-searcher/user-search/ui-user-search",
-      "sourceRoot": "libs/github-searcher/user-search/ui-user-search/src",
-      "prefix": "github-searcher",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-searcher/user-search/ui-user-search/src/**/*.ts",
-              "libs/github-searcher/user-search/ui-user-search/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/github-searcher/user-search/ui-user-search"
-          ],
-          "options": {
-            "jestConfig": "libs/github-searcher/user-search/ui-user-search/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "github-searcher-user-search-ui-search-bar": {
-      "projectType": "library",
-      "root": "libs/github-searcher/user-search/ui-search-bar",
-      "sourceRoot": "libs/github-searcher/user-search/ui-search-bar/src",
-      "prefix": "github-searcher",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-searcher/user-search/ui-search-bar/src/**/*.ts",
-              "libs/github-searcher/user-search/ui-search-bar/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/github-searcher/user-search/ui-search-bar"
-          ],
-          "options": {
-            "jestConfig": "libs/github-searcher/user-search/ui-search-bar/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "github-searcher-user-search-data-access": {
-      "projectType": "library",
-      "root": "libs/github-searcher/user-search/data-access",
-      "sourceRoot": "libs/github-searcher/user-search/data-access/src",
-      "prefix": "github-searcher",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-searcher/user-search/data-access/src/**/*.ts",
-              "libs/github-searcher/user-search/data-access/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-searcher/user-search/data-access"],
-          "options": {
-            "jestConfig": "libs/github-searcher/user-search/data-access/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "github-searcher-user-search-feature-search-filters": {
-      "projectType": "library",
-      "root": "libs/github-searcher/user-search/feature-search-filters",
-      "sourceRoot": "libs/github-searcher/user-search/feature-search-filters/src",
-      "prefix": "github-searcher",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-searcher/user-search/feature-search-filters/src/**/*.ts",
-              "libs/github-searcher/user-search/feature-search-filters/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/github-searcher/user-search/feature-search-filters"
-          ],
-          "options": {
-            "jestConfig": "libs/github-searcher/user-search/feature-search-filters/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "github-searcher-user-search-ui-search-filters": {
-      "projectType": "library",
-      "root": "libs/github-searcher/user-search/ui-search-filters",
-      "sourceRoot": "libs/github-searcher/user-search/ui-search-filters/src",
-      "prefix": "github-searcher",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-searcher/user-search/ui-search-filters/src/**/*.ts",
-              "libs/github-searcher/user-search/ui-search-filters/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/github-searcher/user-search/ui-search-filters"
-          ],
-          "options": {
-            "jestConfig": "libs/github-searcher/user-search/ui-search-filters/jest.config.js",
+            "jestConfig": "libs/github-searcher/core/layout/ui-content/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -387,53 +201,197 @@
         }
       }
     },
-    "github-searcher-core-layout-ui-content": {
+    "github-searcher-e2e": {
+      "root": "apps/github-searcher-e2e",
+      "sourceRoot": "apps/github-searcher-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/github-searcher-e2e/cypress.json",
+            "tsConfig": "apps/github-searcher-e2e/tsconfig.e2e.json",
+            "devServerTarget": "github-searcher:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "github-searcher:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/github-searcher-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "github-searcher-shared-assets": {
       "projectType": "library",
-      "root": "libs/github-searcher/core/layout/ui-content",
-      "sourceRoot": "libs/github-searcher/core/layout/ui-content/src",
+      "root": "libs/github-searcher/shared/assets",
+      "sourceRoot": "libs/github-searcher/shared/assets/src",
+      "prefix": "github-searcher",
+      "targets": {}
+    },
+    "github-searcher-shared-environments": {
+      "projectType": "library",
+      "root": "libs/github-searcher/shared/environments",
+      "sourceRoot": "libs/github-searcher/shared/environments/src",
       "prefix": "github-searcher",
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/github-searcher/core/layout/ui-content/src/**/*.ts",
-              "libs/github-searcher/core/layout/ui-content/src/**/*.html"
+              "libs/github-searcher/shared/environments/src/**/*.ts",
+              "libs/github-searcher/shared/environments/src/**/*.html"
             ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-searcher/core/layout/ui-content"],
+          "outputs": ["coverage/libs/github-searcher/shared/environments"],
           "options": {
-            "jestConfig": "libs/github-searcher/core/layout/ui-content/jest.config.js",
+            "jestConfig": "libs/github-searcher/shared/environments/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "github-searcher-user-search-ui-search-results": {
+    "github-searcher-shared-styles": {
       "projectType": "library",
-      "root": "libs/github-searcher/user-search/ui-search-results",
-      "sourceRoot": "libs/github-searcher/user-search/ui-search-results/src",
+      "root": "libs/github-searcher/shared/styles",
+      "sourceRoot": "libs/github-searcher/shared/styles/src",
+      "prefix": "github-searcher",
+      "targets": {}
+    },
+    "github-searcher-shell": {
+      "projectType": "library",
+      "root": "libs/github-searcher/shell",
+      "sourceRoot": "libs/github-searcher/shell/src",
       "prefix": "github-searcher",
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/github-searcher/user-search/ui-search-results/src/**/*.ts",
-              "libs/github-searcher/user-search/ui-search-results/src/**/*.html"
+              "libs/github-searcher/shell/src/**/*.ts",
+              "libs/github-searcher/shell/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-searcher/shell"],
+          "options": {
+            "jestConfig": "libs/github-searcher/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "github-searcher-user-search-data-access": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/data-access",
+      "sourceRoot": "libs/github-searcher/user-search/data-access/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/data-access/src/**/*.ts",
+              "libs/github-searcher/user-search/data-access/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-searcher/user-search/data-access"],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "github-searcher-user-search-feature-search-bar": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/feature-search-bar",
+      "sourceRoot": "libs/github-searcher/user-search/feature-search-bar/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/feature-search-bar/src/**/*.ts",
+              "libs/github-searcher/user-search/feature-search-bar/src/**/*.html"
             ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
           "outputs": [
-            "coverage/libs/github-searcher/user-search/ui-search-results"
+            "coverage/libs/github-searcher/user-search/feature-search-bar"
           ],
           "options": {
-            "jestConfig": "libs/github-searcher/user-search/ui-search-results/jest.config.js",
+            "jestConfig": "libs/github-searcher/user-search/feature-search-bar/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "github-searcher-user-search-feature-search-filters": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/feature-search-filters",
+      "sourceRoot": "libs/github-searcher/user-search/feature-search-filters/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/feature-search-filters/src/**/*.ts",
+              "libs/github-searcher/user-search/feature-search-filters/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/github-searcher/user-search/feature-search-filters"
+          ],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/feature-search-filters/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "github-searcher-user-search-feature-search-pagination": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/feature-search-pagination",
+      "sourceRoot": "libs/github-searcher/user-search/feature-search-pagination/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/feature-search-pagination/src/**/*.ts",
+              "libs/github-searcher/user-search/feature-search-pagination/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/github-searcher/user-search/feature-search-pagination"
+          ],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/feature-search-pagination/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -493,6 +451,112 @@
         }
       }
     },
+    "github-searcher-user-search-shell": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/shell",
+      "sourceRoot": "libs/github-searcher/user-search/shell/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/shell/src/**/*.ts",
+              "libs/github-searcher/user-search/shell/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-searcher/user-search/shell"],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "github-searcher-user-search-ui-search-bar": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/ui-search-bar",
+      "sourceRoot": "libs/github-searcher/user-search/ui-search-bar/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/ui-search-bar/src/**/*.ts",
+              "libs/github-searcher/user-search/ui-search-bar/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/github-searcher/user-search/ui-search-bar"
+          ],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/ui-search-bar/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "github-searcher-user-search-ui-search-filters": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/ui-search-filters",
+      "sourceRoot": "libs/github-searcher/user-search/ui-search-filters/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/ui-search-filters/src/**/*.ts",
+              "libs/github-searcher/user-search/ui-search-filters/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/github-searcher/user-search/ui-search-filters"
+          ],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/ui-search-filters/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "github-searcher-user-search-ui-search-results": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/ui-search-results",
+      "sourceRoot": "libs/github-searcher/user-search/ui-search-results/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/ui-search-results/src/**/*.ts",
+              "libs/github-searcher/user-search/ui-search-results/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/github-searcher/user-search/ui-search-results"
+          ],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/ui-search-results/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "github-searcher-user-search-ui-user-list": {
       "projectType": "library",
       "root": "libs/github-searcher/user-search/ui-user-list",
@@ -518,92 +582,28 @@
         }
       }
     },
-    "github-searcher-user-search-feature-search-pagination": {
+    "github-searcher-user-search-ui-user-search": {
       "projectType": "library",
-      "root": "libs/github-searcher/user-search/feature-search-pagination",
-      "sourceRoot": "libs/github-searcher/user-search/feature-search-pagination/src",
+      "root": "libs/github-searcher/user-search/ui-user-search",
+      "sourceRoot": "libs/github-searcher/user-search/ui-user-search/src",
       "prefix": "github-searcher",
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/github-searcher/user-search/feature-search-pagination/src/**/*.ts",
-              "libs/github-searcher/user-search/feature-search-pagination/src/**/*.html"
+              "libs/github-searcher/user-search/ui-user-search/src/**/*.ts",
+              "libs/github-searcher/user-search/ui-user-search/src/**/*.html"
             ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
           "outputs": [
-            "coverage/libs/github-searcher/user-search/feature-search-pagination"
+            "coverage/libs/github-searcher/user-search/ui-user-search"
           ],
           "options": {
-            "jestConfig": "libs/github-searcher/user-search/feature-search-pagination/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "github-searcher-shared-assets": {
-      "projectType": "library",
-      "root": "libs/github-searcher/shared/assets",
-      "sourceRoot": "libs/github-searcher/shared/assets/src",
-      "prefix": "github-searcher",
-      "targets": {}
-    },
-    "github-searcher-shared-styles": {
-      "projectType": "library",
-      "root": "libs/github-searcher/shared/styles",
-      "sourceRoot": "libs/github-searcher/shared/styles/src",
-      "prefix": "github-searcher",
-      "targets": {}
-    },
-    "github-searcher-shared-environments": {
-      "projectType": "library",
-      "root": "libs/github-searcher/shared/environments",
-      "sourceRoot": "libs/github-searcher/shared/environments/src",
-      "prefix": "github-searcher",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-searcher/shared/environments/src/**/*.ts",
-              "libs/github-searcher/shared/environments/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-searcher/shared/environments"],
-          "options": {
-            "jestConfig": "libs/github-searcher/shared/environments/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "github-searcher-core-data-access": {
-      "projectType": "library",
-      "root": "libs/github-searcher/core/data-access",
-      "sourceRoot": "libs/github-searcher/core/data-access/src",
-      "prefix": "github-searcher",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-searcher/core/data-access/src/**/*.ts",
-              "libs/github-searcher/core/data-access/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/github-searcher/core/data-access"],
-          "options": {
-            "jestConfig": "libs/github-searcher/core/data-access/jest.config.js",
+            "jestConfig": "libs/github-searcher/user-search/ui-user-search/jest.config.js",
             "passWithNoTests": true
           }
         }

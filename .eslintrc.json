@@ -1,10 +1,11 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx"],
+  "plugins": ["@nrwl/nx", "ordered-imports"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "extends": ["plugin:ordered-imports/recommended"],
       "rules": {
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
@@ -80,6 +81,40 @@
                   "type:environments"
                 ]
               }
+            ]
+          }
+        ],
+        "ordered-imports/ordered-imports": [
+          "error",
+          {
+            "symbols-first": true,
+            "declaration-ordering": [
+              "type",
+              {
+                "ordering": [
+                  "side-effect",
+                  "default",
+                  "namespace",
+                  "destructured"
+                ],
+                "secondaryOrdering": ["name", "case-insensitive"]
+              }
+            ],
+            "specifier-ordering": "case-insensitive",
+            "group-ordering": [
+              {
+                "name": "project root",
+                "match": "^@(?!(github-searcher|internal)).*|^[a-zA-Z].*",
+                "order": 20
+              },
+              {
+                "name": "internal routes",
+                "match": "^@(github-searcher|internal).*",
+                "order": 30
+              },
+              { "name": "parent directories", "match": "^\\.\\.", "order": 40 },
+              { "name": "current directory", "match": "^\\.", "order": 50 },
+              { "name": "third-party", "match": ".*", "order": 10 }
             ]
           }
         ]

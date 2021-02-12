@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { GithubSearcherShellModule } from '@github-searcher/github-searcher/shell';
 
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent],
