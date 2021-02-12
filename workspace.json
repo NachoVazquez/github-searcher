@@ -26,6 +26,11 @@
                 "glob": "**/*",
                 "input": "libs/github-searcher/shared/assets/src/assets",
                 "output": "assets"
+              },
+              {
+                "glob": "_redirects",
+                "input": "apps/github-searcher/src",
+                "output": "/"
               }
             ],
             "styles": [
