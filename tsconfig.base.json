@@ -75,6 +75,15 @@
       ],
       "@github-searcher/github-searcher/user-search/feature-user-search": [
         "libs/github-searcher/user-search/feature-user-search/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/user-search/domain": [
+        "libs/github-searcher/user-search/domain/src/index.ts"
+      ],
+      "@github-searcher/shared/utils-types": [
+        "libs/shared/utils-types/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/user-search/shared/utils-test": [
+        "libs/github-searcher/user-search/shared/utils-test/src/index.ts"
       ]
     }
   },

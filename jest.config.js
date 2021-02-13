@@ -18,5 +18,8 @@ module.exports = {
     '<rootDir>/libs/github-searcher/shared/environments',
     '<rootDir>/libs/github-searcher/core/data-access',
     '<rootDir>/libs/shared/utils-router',
+    '<rootDir>/libs/github-searcher/user-search/domain',
+    '<rootDir>/libs/shared/utils-types',
+    '<rootDir>/libs/github-searcher/user-search/shared/utils-test',
   ],
 };
