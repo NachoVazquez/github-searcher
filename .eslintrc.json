@@ -15,7 +15,7 @@
             "depConstraints": [
               {
                 "sourceTag": "scope:shared",
-                "onlyDependOnLibsWithTags": ["scope:shared"]
+                "onlyDependOnLibsWithTags": ["scope:shared", "type:domain"]
               },
               {
                 "sourceTag": "scope:core",
@@ -53,7 +53,8 @@
                   "type:feature",
                   "type:ui",
                   "type:data-access",
-                  "type:utils"
+                  "type:utils",
+                  "type:domain"
                 ]
               },
               {
@@ -62,7 +63,8 @@
                   "type:feature",
                   "type:ui",
                   "type:data-access",
-                  "type:utils"
+                  "type:utils",
+                  "type:domain"
                 ]
               },
               {
@@ -71,7 +73,8 @@
                   "type:feature",
                   "type:ui",
                   "type:data-access",
-                  "type:utils"
+                  "type:utils",
+                  "type:domain"
                 ]
               },
               {
@@ -79,7 +82,8 @@
                 "onlyDependOnLibsWithTags": [
                   "type:ui",
                   "type:assets",
-                  "type:utils"
+                  "type:utils",
+                  "type:domain"
                 ]
               },
               {
@@ -87,12 +91,17 @@
                 "onlyDependOnLibsWithTags": [
                   "type:data-access",
                   "type:environments",
-                  "type:utils"
+                  "type:utils",
+                  "type:domain"
                 ]
               },
               {
                 "sourceTag": "type:utils",
-                "onlyDependOnLibsWithTags": ["type:environments", "type:utils"]
+                "onlyDependOnLibsWithTags": [
+                  "type:environments",
+                  "type:utils",
+                  "type:domain"
+                ]
               }
             ]
           }

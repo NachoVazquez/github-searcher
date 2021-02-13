@@ -93,6 +93,20 @@
     },
     "github-searcher-user-search-feature-user-search": {
       "tags": ["type:feature", "scope:github-searcher", "scope:user-search"]
+    },
+    "github-searcher-user-search-domain": {
+      "tags": ["type:domain", "scope:github-searcher", "scope:user-search"]
+    },
+    "shared-utils-types": {
+      "tags": ["type:utils", "scope:shared"]
+    },
+    "github-searcher-user-search-shared-utils-test": {
+      "tags": [
+        "type:utils",
+        "scope:github-searcher",
+        "scope:user-search",
+        "scope:shared"
+      ]
     }
   }
 }

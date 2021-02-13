@@ -587,6 +587,83 @@
           }
         }
       }
+    },
+    "github-searcher-user-search-domain": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/domain",
+      "sourceRoot": "libs/github-searcher/user-search/domain/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/domain/src/**/*.ts",
+              "libs/github-searcher/user-search/domain/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-searcher/user-search/domain"],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-utils-types": {
+      "projectType": "library",
+      "root": "libs/shared/utils-types",
+      "sourceRoot": "libs/shared/utils-types/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/utils-types/src/**/*.ts",
+              "libs/shared/utils-types/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/utils-types"],
+          "options": {
+            "jestConfig": "libs/shared/utils-types/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "github-searcher-user-search-shared-utils-test": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/shared/utils-test",
+      "sourceRoot": "libs/github-searcher/user-search/shared/utils-test/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/shared/utils-test/src/**/*.ts",
+              "libs/github-searcher/user-search/shared/utils-test/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/github-searcher/user-search/shared/utils-test"
+          ],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/shared/utils-test/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
