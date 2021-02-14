@@ -1,1 +1,18 @@
-<p>user-list-item-ui works!</p>
+<mat-card *ngIf="user" class="user-card" (click)="select()">
+  <mat-card-header>
+    <img mat-card-avatar [src]="user?.avatar_url" class="user-card__avatar" />
+    <mat-card-title>{{ user?.name }}</mat-card-title>
+    <mat-card-subtitle>{{ user?.login }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>
+      {{ user?.bio }}
+    </p>
+    <div class="user-card__details">
+      <span>{{ user?.location }}</span>
+      <span>Repos: {{ user?.public_repos }}</span>
+      <span>Followers: {{ user?.followers }}</span>
+    </div>
+  </mat-card-content>
+</mat-card>

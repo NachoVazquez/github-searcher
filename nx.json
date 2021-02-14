@@ -1,14 +1,9 @@
 {
   "npmScope": "github-searcher",
-  "affected": {
-    "defaultBase": "main"
-  },
+  "affected": { "defaultBase": "main" },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -79,27 +74,20 @@
     "github-searcher-user-search-ui-search-filters": {
       "tags": ["type:ui", "scope:github-searcher", "scope:user-search"]
     },
-    "github-searcher-user-search-ui-search-results": {
-      "tags": ["type:ui", "scope:github-searcher", "scope:user-search"]
-    },
     "github-searcher-user-search-ui-user-list": {
       "tags": ["type:ui", "scope:github-searcher", "scope:user-search"]
     },
     "github-searcher-core-ui-layout": {
       "tags": ["type:ui", "scope:github-searcher", "scope:core", "scope:layout"]
     },
-    "shared-utils-router": {
-      "tags": ["type:utils", "scope:shared"]
-    },
+    "shared-utils-router": { "tags": ["type:utils", "scope:shared"] },
     "github-searcher-user-search-feature-user-search": {
       "tags": ["type:feature", "scope:github-searcher", "scope:user-search"]
     },
     "github-searcher-user-search-domain": {
       "tags": ["type:domain", "scope:github-searcher", "scope:user-search"]
     },
-    "shared-utils-types": {
-      "tags": ["type:utils", "scope:shared"]
-    },
+    "shared-utils-types": { "tags": ["type:utils", "scope:shared"] },
     "github-searcher-user-search-shared-utils-test": {
       "tags": [
         "type:utils",

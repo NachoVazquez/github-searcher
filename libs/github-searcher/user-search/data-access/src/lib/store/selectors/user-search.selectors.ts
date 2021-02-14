@@ -33,6 +33,26 @@ export const selectSearchStatus = createSelector(
   fromUserSearch.selectSearchStatus
 );
 
+export const selectIsSearching = createSelector(
+  selectSearchStatus,
+  status => status === 'searching'
+);
+
+export const selectIsCurrentSearchSuccessful = createSelector(
+  selectSearchStatus,
+  status => status === 'success'
+);
+
+export const selectIsCurrentSearchFailure = createSelector(
+  selectSearchStatus,
+  status => status === 'error'
+);
+
+export const selectAtLeastOneSearchAttempted = createSelector(
+  selectSearchStatus,
+  status => status !== 'initial'
+);
+
 export const selectTotalItems = createSelector(
   selectUserSearchSliceState,
   fromUserSearch.selectTotalItems

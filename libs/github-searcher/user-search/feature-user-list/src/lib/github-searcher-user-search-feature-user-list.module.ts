@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { GithubSearcherUserSearchUiUserListModule } from '@github-searcher/github-searcher/user-search/ui-user-list';
@@ -5,7 +6,7 @@ import { GithubSearcherUserSearchUiUserListModule } from '@github-searcher/githu
 import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
-  imports: [GithubSearcherUserSearchUiUserListModule],
+  imports: [CommonModule, GithubSearcherUserSearchUiUserListModule],
   declarations: [UserListComponent],
   exports: [UserListComponent],
 })
