@@ -1,1 +1,44 @@
-<p>search-filters-ui works!</p>
+<mat-accordion class="search-filters">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> User Filters </mat-panel-title>
+      <mat-panel-description>
+        Advanced Search
+        <mat-icon>filter_alt</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <mat-label>From this location</mat-label>
+      <input
+        [ngModel]="userFilters?.location"
+        (change)="updateLocationFilter($event?.target?.value)"
+        matInput
+        type="text"
+        placeholder="San Francisco, CA"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>With this many followers</mat-label>
+      <input
+        [ngModel]="userFilters?.followers"
+        (change)="updateFollowersFilter($event?.target?.value)"
+        matInput
+        type="text"
+        placeholder="20..50, >200, <2"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>With this many public repositories</mat-label>
+      <input
+        [ngModel]="userFilters?.repositories"
+        (change)="updateRepositoriesFilter($event?.target?.value)"
+        matInput
+        type="text"
+        placeholder="0, <42, >5"
+      />
+    </mat-form-field>
+  </mat-expansion-panel>
+</mat-accordion>

@@ -7,6 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class SearchBarUiComponent {
   @Input() nameFilter: string | null = '';
+
   @Output() search = new EventEmitter<void>();
   @Output() updateNameFilter = new EventEmitter<string>();
 
