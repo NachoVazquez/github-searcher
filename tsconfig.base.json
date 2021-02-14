@@ -81,6 +81,15 @@
       ],
       "@github-searcher/github-searcher/user-search/shared/utils-test": [
         "libs/github-searcher/user-search/shared/utils-test/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/user-search/feature-sort-bar": [
+        "libs/github-searcher/user-search/feature-sort-bar/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/user-search/ui-sort-bar": [
+        "libs/github-searcher/user-search/ui-sort-bar/src/index.ts"
+      ],
+      "@github-searcher/github-searcher/user-search/shared/utils-pipe": [
+        "libs/github-searcher/user-search/shared/utils-pipe/src/index.ts"
       ]
     }
   },

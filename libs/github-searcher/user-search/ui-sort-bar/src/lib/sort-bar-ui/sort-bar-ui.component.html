@@ -1,0 +1,11 @@
+<mat-card class="sort-bar">
+  <span class="sort-bar__items-count">{{ totalItems }} users</span>
+  <mat-form-field appearance="fill">
+    <mat-label>Sort</mat-label>
+    <mat-select (selectionChange)="updateSort($event.value)" [value]="sortType">
+      <mat-option *ngFor="let type of sortTypes" [value]="type">
+        {{ type | humanizeCamelCase }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-card>

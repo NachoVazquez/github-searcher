@@ -1,3 +1,5 @@
+@import 'libs/github-searcher/shared/styles/src/lib/breakpoints';
+
 .search-bar {
   display: flex;
   align-items: center;
@@ -6,8 +8,15 @@
   margin-top: 1rem;
   padding: 1rem 2rem;
 
+  @include media-breakpoint('lt-md') {
+    width: 100%;
+  }
+
   &__search-input {
     margin-right: 6rem;
+    @include media-breakpoint('lt-md') {
+      margin-right: 3rem;
+    }
     flex: 1;
   }
 }

@@ -1,3 +1,5 @@
+@import 'libs/github-searcher/shared/styles/src/lib/breakpoints';
+
 .user-list {
   display: flex;
   flex-direction: column;
@@ -6,4 +8,8 @@
   max-height: 60vh;
   overflow: auto;
   padding: 0.5rem;
+
+  @include media-breakpoint('lt-md') {
+    width: 100%;
+  }
 }

@@ -4,9 +4,12 @@
   </ng-container>
   <ng-container *ngIf="searchHasRan">
     <ng-container *ngIf="isCurrentSearchSuccessful">
+      <github-searcher-sort-bar></github-searcher-sort-bar>
       <github-searcher-user-list></github-searcher-user-list>
-      <github-searcher-search-pagination></github-searcher-search-pagination>
     </ng-container>
+    <github-searcher-search-pagination
+      *ngIf="!isCurrentSearchFailure"
+    ></github-searcher-search-pagination>
     <ng-container *ngIf="isCurrentSearchFailure">
       <github-searcher-search-error-ui></github-searcher-search-error-ui>
     </ng-container>

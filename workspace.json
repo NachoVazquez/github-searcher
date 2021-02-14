@@ -71,7 +71,9 @@
         },
         "serve": {
           "executor": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "github-searcher:build" },
+          "options": {
+            "browserTarget": "github-searcher:build"
+          },
           "configurations": {
             "production": {
               "browserTarget": "github-searcher:build:production"
@@ -80,7 +82,9 @@
         },
         "extract-i18n": {
           "executor": "@angular-devkit/build-angular:extract-i18n",
-          "options": { "browserTarget": "github-searcher:build" }
+          "options": {
+            "browserTarget": "github-searcher:build"
+          }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -633,9 +637,90 @@
           }
         }
       }
+    },
+    "github-searcher-user-search-feature-sort-bar": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/feature-sort-bar",
+      "sourceRoot": "libs/github-searcher/user-search/feature-sort-bar/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/feature-sort-bar/src/**/*.ts",
+              "libs/github-searcher/user-search/feature-sort-bar/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/github-searcher/user-search/feature-sort-bar"
+          ],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/feature-sort-bar/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "github-searcher-user-search-ui-sort-bar": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/ui-sort-bar",
+      "sourceRoot": "libs/github-searcher/user-search/ui-sort-bar/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/ui-sort-bar/src/**/*.ts",
+              "libs/github-searcher/user-search/ui-sort-bar/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github-searcher/user-search/ui-sort-bar"],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/ui-sort-bar/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "github-searcher-user-search-shared-utils-pipe": {
+      "projectType": "library",
+      "root": "libs/github-searcher/user-search/shared/utils-pipe",
+      "sourceRoot": "libs/github-searcher/user-search/shared/utils-pipe/src",
+      "prefix": "github-searcher",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/github-searcher/user-search/shared/utils-pipe/src/**/*.ts",
+              "libs/github-searcher/user-search/shared/utils-pipe/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/github-searcher/user-search/shared/utils-pipe"
+          ],
+          "options": {
+            "jestConfig": "libs/github-searcher/user-search/shared/utils-pipe/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
-  "cli": { "defaultCollection": "@nrwl/angular" },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
   "generators": {
     "@nrwl/angular:application": {
       "style": "scss",

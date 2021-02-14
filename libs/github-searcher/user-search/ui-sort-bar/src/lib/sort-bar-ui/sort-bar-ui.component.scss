@@ -1,0 +1,27 @@
+@import 'libs/github-searcher/shared/styles/src/lib/breakpoints';
+
+.sort-bar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  width: 50%;
+  align-items: center;
+
+  @include media-breakpoint('lt-md') {
+    width: 90%;
+
+    .mat-form-field {
+      width: 60%;
+    }
+  }
+
+  &__items-count {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .mat-form-field-wrapper {
+    padding-top: 1.34375em;
+  }
+}

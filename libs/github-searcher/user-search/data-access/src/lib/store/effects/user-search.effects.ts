@@ -65,9 +65,12 @@ export class UserSearchEffects {
     )
   );
 
-  patchPagination$ = createEffect(() => {
+  reSearch$ = createEffect(() => {
     return this.actions$.pipe(
-      ofType(UserSearchFiltersActions.patchPagination),
+      ofType(
+        UserSearchFiltersActions.patchPagination,
+        UserSearchFiltersActions.patchSortBy
+      ),
       map(() => UserSearchActions.searchGithubUsers())
     );
   });
