@@ -31,6 +31,7 @@ export class SearchBarComponent {
   }
 
   search() {
+    this.store.dispatch(UserSearchFiltersActions.resetPagination());
     this.store.dispatch(UserSearchActions.searchGithubUsers());
   }
 }

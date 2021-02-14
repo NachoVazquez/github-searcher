@@ -7,7 +7,11 @@ import { catchError, map, switchMap, withLatestFrom } from 'rxjs/operators';
 import { GithubUserResult } from '@github-searcher/github-searcher/user-search/domain';
 
 import { UserSearchService } from '../../services';
-import { UserSearchActions, UserSearchAPIActions } from '../actions';
+import {
+  UserSearchActions,
+  UserSearchAPIActions,
+  UserSearchFiltersActions,
+} from '../actions';
 import { State } from '../reducers';
 import { UserSearchFilterSelectors } from '../selectors';
 
@@ -60,6 +64,13 @@ export class UserSearchEffects {
       )
     )
   );
+
+  patchPagination$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(UserSearchFiltersActions.patchPagination),
+      map(() => UserSearchActions.searchGithubUsers())
+    );
+  });
 
   constructor(
     private actions$: Actions,

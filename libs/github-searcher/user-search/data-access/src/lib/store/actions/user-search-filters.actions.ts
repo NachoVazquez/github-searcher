@@ -12,16 +12,18 @@ export const patchNameFilter = createAction(
 );
 
 export const patchSortBy = createAction(
-  '[SearchBar] Patch Sort',
+  '[SortBar] Patch Sort',
   props<{ sortBy: SortType }>()
 );
 
 export const patchPagination = createAction(
-  '[SearchBar] Patch Pagination',
+  '[Paginator] Patch Pagination',
   props<{ pagination: Pagination }>()
 );
 
+export const resetPagination = createAction('[SearchBar] Reset Pagination');
+
 export const patchUserFilters = createAction(
-  '[SearchBar] Patch User Filters',
+  '[SearchFilters] Patch User Filters',
   props<{ userFilters: GithubUserQuery }>()
 );
