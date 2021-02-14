@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { GithubUser } from '@github-searcher/github-searcher/user-search/domain';
 import {
   State,
+  UserSearchActions,
   UserSearchSelectors,
 } from '@github-searcher/github-searcher/user-search/data-access';
 
@@ -23,6 +24,6 @@ export class UserListComponent {
   }
 
   selectUser(user: GithubUser): void {
-    window.location.href = user.html_url;
+    this.store.dispatch(UserSearchActions.selectUser({ user }));
   }
 }

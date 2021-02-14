@@ -7,6 +7,8 @@ import { provideMockStore } from '@ngrx/store/testing';
 import { Action } from '@ngrx/store';
 
 import {
+  createEmptyServiceSearchResult,
+  createEmptyUserSearchResult,
   createServiceGetByHandleResult,
   createServiceSearchResult,
   createUserSearchResult,
@@ -78,6 +80,45 @@ describe(UserSearchEffects.name, () => {
         'NachoVazquez'
       );
       expect(userSearchService.getByHandle).toHaveBeenCalledWith('LayZeeDK');
+    });
+
+    it('should return a UserSearchAPIActions.searchGithubUsersSuccess with a empty list of users when the search returned no element success', () => {
+      const action = UserSearchActions.searchGithubUsers();
+      const result = createEmptyUserSearchResult();
+      const resultSearch = createEmptyServiceSearchResult();
+      const responseSearch = cold('-a|', { a: resultSearch });
+      userSearchService.search = jest.fn(() => responseSearch);
+      userSearchService.getByHandle = jest.fn();
+      const completion = UserSearchAPIActions.searchGithubUsersSuccess({
+        userSearchResult: result,
+      });
+
+      actions$ = hot('-a', { a: action });
+      const expected = cold('--b', { b: completion });
+
+      expect(effects.searchGithubUsers$).toBeObservable(expected);
+      expect(userSearchService.search).toHaveBeenCalledTimes(1);
+      expect(userSearchService.search).toHaveBeenCalledWith(userSearchFilters);
+      expect(userSearchService.getByHandle).not.toHaveBeenCalled();
+    });
+
+    it('should return a UserSearchAPIActions.searchGithubUsersFailure when the search has errors', () => {
+      const action = UserSearchActions.searchGithubUsers();
+      const error = { message: 'Unexpected Error. Try again later.' };
+      const responseSearch = cold('-#|', {}, error);
+      userSearchService.search = jest.fn(() => responseSearch);
+      userSearchService.getByHandle = jest.fn();
+      const completion = UserSearchAPIActions.searchGithubUsersFailure({
+        error: error.message,
+      });
+
+      actions$ = hot('-a', { a: action });
+      const expected = cold('--b', { b: completion });
+
+      expect(effects.searchGithubUsers$).toBeObservable(expected);
+      expect(userSearchService.search).toHaveBeenCalledTimes(1);
+      expect(userSearchService.search).toHaveBeenCalledWith(userSearchFilters);
+      expect(userSearchService.getByHandle).not.toHaveBeenCalled();
     });
   });
 });

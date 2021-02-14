@@ -23,22 +23,34 @@
       <mat-label>With this many followers</mat-label>
       <input
         [ngModel]="userFilters?.followers"
-        (change)="updateFollowersFilter($event?.target?.value)"
+        (change)="
+          !followersControl.invalid &&
+            updateFollowersFilter($event?.target?.value)
+        "
+        [pattern]="rangePattern"
         matInput
         type="text"
         placeholder="20..50, >200, <2"
+        #followersControl="ngModel"
       />
+      <mat-error *ngIf="followersControl.invalid">Format Invalid</mat-error>
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>With this many public repositories</mat-label>
       <input
         [ngModel]="userFilters?.repositories"
-        (change)="updateRepositoriesFilter($event?.target?.value)"
+        (change)="
+          !repositoriesControl.invalid &&
+            updateRepositoriesFilter($event?.target?.value)
+        "
+        [pattern]="rangePattern"
         matInput
         type="text"
         placeholder="0, <42, >5"
+        #repositoriesControl="ngModel"
       />
+      <mat-error *ngIf="repositoriesControl.invalid">Format Invalid</mat-error>
     </mat-form-field>
   </mat-expansion-panel>
 </mat-accordion>

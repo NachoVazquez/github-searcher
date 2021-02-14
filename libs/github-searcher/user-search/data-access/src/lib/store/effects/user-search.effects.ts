@@ -2,7 +2,13 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { forkJoin, of } from 'rxjs';
-import { catchError, map, switchMap, withLatestFrom } from 'rxjs/operators';
+import {
+  catchError,
+  map,
+  switchMap,
+  tap,
+  withLatestFrom,
+} from 'rxjs/operators';
 
 import { GithubUserResult } from '@github-searcher/github-searcher/user-search/domain';
 
@@ -74,6 +80,18 @@ export class UserSearchEffects {
       map(() => UserSearchActions.searchGithubUsers())
     );
   });
+
+  selectUser$ = createEffect(
+    () => {
+      return this.actions$.pipe(
+        ofType(UserSearchActions.selectUser),
+        tap(({ user }) => {
+          window.location.href = user.html_url;
+        })
+      );
+    },
+    { dispatch: false }
+  );
 
   constructor(
     private actions$: Actions,

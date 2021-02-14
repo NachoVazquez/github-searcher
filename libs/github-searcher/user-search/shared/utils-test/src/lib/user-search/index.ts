@@ -4,7 +4,7 @@ import {
   PartialGithubUserResult,
 } from '@github-searcher/github-searcher/user-search/domain';
 
-const userSearchItems: GithubUser[] = [
+export const userSearchItems: GithubUser[] = [
   {
     login: 'NachoVazquez',
     id: 9338604,
@@ -44,6 +44,11 @@ export const createServiceSearchResult = (): PartialGithubUserResult => ({
   ],
 });
 
+export const createEmptyServiceSearchResult = (): PartialGithubUserResult => ({
+  total_count: 0,
+  items: [],
+});
+
 export const createServiceGetByHandleResult = (
   handle: string
 ): GithubUser | undefined =>
@@ -52,6 +57,11 @@ export const createServiceGetByHandleResult = (
 export const createUserSearchResult = (): GithubUserResult => ({
   total_count: 100,
   items: userSearchItems,
+});
+
+export const createEmptyUserSearchResult = (): GithubUserResult => ({
+  total_count: 0,
+  items: [],
 });
 
 export const userSearchFilters = {
