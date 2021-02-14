@@ -18,6 +18,8 @@ export class SearchFiltersUiComponent {
   @Input() userFilters: GithubUserQuery | null = null;
   @Output() updateUserFilters = new EventEmitter<GithubUserQuery>();
 
+  rangePattern = '^([0-9]+)$|([0-9]+..[0-9]+)$|(<[0-9]+)$|(>[0-9]+)$';
+
   updateLocationFilter(value: string): void {
     this.updateUserFilters.emit({ ...this.userFilters, location: value });
   }

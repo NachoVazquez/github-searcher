@@ -9,6 +9,11 @@
 
 Monorepo for the Github User Searcher apps.
 
+## Production deploy
+
+You can visit a demo page for this app
+[here](https://github-searcher-nx.netlify.app/)
+
 ## Usage
 
 To run the development server run the following command
