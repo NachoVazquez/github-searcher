@@ -1,9 +1,16 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 
 @Component({
   selector: 'github-searcher-search-bar-ui',
   templateUrl: './search-bar-ui.component.html',
   styleUrls: ['./search-bar-ui.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchBarUiComponent {
   @Input() nameFilter: string | null = '';

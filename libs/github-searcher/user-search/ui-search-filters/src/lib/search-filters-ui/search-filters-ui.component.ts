@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   Input,
@@ -13,6 +14,7 @@ import { GithubUserQuery } from '@github-searcher/github-searcher/user-search/do
   templateUrl: './search-filters-ui.component.html',
   styleUrls: ['./search-filters-ui.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchFiltersUiComponent {
   @Input() userFilters: GithubUserQuery | null = null;

@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   Input,
@@ -16,6 +17,7 @@ import {
   templateUrl: './sort-bar-ui.component.html',
   styleUrls: ['./sort-bar-ui.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SortBarUiComponent {
   @Input() totalItems: number | null = 0;
