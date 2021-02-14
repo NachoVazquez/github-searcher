@@ -5,7 +5,6 @@ import { PageEvent } from '@angular/material/paginator';
 
 import {
   State,
-  UserSearchActions,
   UserSearchFiltersActions,
   UserSearchFilterSelectors,
   UserSearchSelectors,
