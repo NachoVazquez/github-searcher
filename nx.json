@@ -95,6 +95,20 @@
         "scope:user-search",
         "scope:shared"
       ]
+    },
+    "github-searcher-user-search-feature-sort-bar": {
+      "tags": ["type:feature", "scope:github-searcher", "scope:user-search"]
+    },
+    "github-searcher-user-search-ui-sort-bar": {
+      "tags": ["type:ui", "scope:github-searcher", "scope:user-search"]
+    },
+    "github-searcher-user-search-shared-utils-pipe": {
+      "tags": [
+        "type:utils",
+        "scope:github-searcher",
+        "scope:user-search",
+        "scope:shared"
+      ]
     }
   }
 }

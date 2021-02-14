@@ -4,7 +4,7 @@ import { SortType } from './sort-type';
 
 export interface GithubUserSearch {
   name: string;
-  sort?: SortType;
+  sort: SortType;
   pagination: Pagination;
   userQuery: GithubUserQuery;
 }

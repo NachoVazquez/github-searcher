@@ -1,8 +1,14 @@
+@import 'libs/github-searcher/shared/styles/src/lib/breakpoints';
+
 .search-filters {
   .mat-expansion-panel {
     width: 60%;
     margin: 0 auto;
     margin-bottom: 1rem !important;
+
+    @include media-breakpoint('lt-md') {
+      width: 100%;
+    }
   }
 
   .mat-expansion-panel-header-title,

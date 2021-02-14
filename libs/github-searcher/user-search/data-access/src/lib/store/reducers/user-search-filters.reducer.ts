@@ -19,6 +19,7 @@ export const initialState: State = {
       followers: '',
       repositories: '',
     },
+    sort: 'BestMatch',
   },
 };
 

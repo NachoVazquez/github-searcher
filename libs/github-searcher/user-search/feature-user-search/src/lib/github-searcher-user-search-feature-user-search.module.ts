@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { GithubSearcherUserSearchFeatureSearchBarModule } from '@github-searcher/github-searcher/user-search/feature-search-bar';
 import { GithubSearcherUserSearchFeatureSearchFiltersModule } from '@github-searcher/github-searcher/user-search/feature-search-filters';
@@ -11,6 +12,7 @@ import { UserSearchComponent } from './user-search';
     GithubSearcherUserSearchFeatureSearchBarModule,
     GithubSearcherUserSearchFeatureSearchFiltersModule,
     GithubSearcherUserSearchFeatureSearchResultsModule,
+    MatDividerModule,
   ],
   declarations: [UserSearchComponent],
 })

@@ -20,5 +20,8 @@ module.exports = {
     '<rootDir>/libs/github-searcher/user-search/domain',
     '<rootDir>/libs/shared/utils-types',
     '<rootDir>/libs/github-searcher/user-search/shared/utils-test',
+    '<rootDir>/libs/github-searcher/user-search/feature-sort-bar',
+    '<rootDir>/libs/github-searcher/user-search/ui-sort-bar',
+    '<rootDir>/libs/github-searcher/user-search/shared/utils-pipe',
   ],
 };
