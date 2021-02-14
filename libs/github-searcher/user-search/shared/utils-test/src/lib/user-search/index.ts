@@ -4,7 +4,7 @@ import {
   PartialGithubUserResult,
 } from '@github-searcher/github-searcher/user-search/domain';
 
-const userSearchItems: GithubUser[] = [
+export const userSearchItems: GithubUser[] = [
   {
     login: 'NachoVazquez',
     id: 9338604,

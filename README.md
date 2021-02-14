@@ -11,10 +11,18 @@ Monorepo for the Github User Searcher apps.
 
 ## Production deploy
 
+Every commit to the remote main branch creates an automatic production deploy.
+
 You can visit a demo page for this app
 [here](https://github-searcher-nx.netlify.app/)
 
 ## Usage
+
+Install Dependencies
+
+```bash
+yarn
+```
 
 To run the development server run the following command
 
