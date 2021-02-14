@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 
 import { GithubUser } from '@github-searcher/github-searcher/user-search/domain';
 
@@ -6,6 +12,7 @@ import { GithubUser } from '@github-searcher/github-searcher/user-search/domain'
   selector: 'github-searcher-user-list-item-ui',
   templateUrl: './user-list-item-ui.component.html',
   styleUrls: ['./user-list-item-ui.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UserListItemUiComponent {
   @Input() user: GithubUser | null = null;
