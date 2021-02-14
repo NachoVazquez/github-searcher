@@ -22,9 +22,7 @@ export class UserSearchService {
   search(
     githubUserSearch: GithubUserSearch
   ): Observable<PartialGithubUserResult> {
-    const queryString = encodeURIComponent(
-      this.stringifier.stringify(githubUserSearch)
-    );
+    const queryString = this.stringifier.stringify(githubUserSearch);
 
     const url = `${BASE_URL}/search/users?${queryString}`;
 

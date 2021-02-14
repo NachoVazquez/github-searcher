@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,6 +15,7 @@ import { GithubSearcherShellRoutingModule } from './github-searcher-shell-routin
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     GithubSearcherShellRoutingModule,
     GithubSearcherCoreDataAccessModule,
     GithubSearcherCoreUiLayoutModule,
