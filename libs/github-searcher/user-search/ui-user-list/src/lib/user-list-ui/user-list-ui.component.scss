@@ -1,3 +1,6 @@
-:host {
-  display: block;
+.user-list {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
 }

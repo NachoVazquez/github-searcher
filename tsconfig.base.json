@@ -40,9 +40,6 @@
       "@github-searcher/github-searcher/user-search/ui-search-filters": [
         "libs/github-searcher/user-search/ui-search-filters/src/index.ts"
       ],
-      "@github-searcher/github-searcher/user-search/ui-search-results": [
-        "libs/github-searcher/user-search/ui-search-results/src/index.ts"
-      ],
       "@github-searcher/github-searcher/user-search/feature-search-results": [
         "libs/github-searcher/user-search/feature-search-results/src/index.ts"
       ],

@@ -1,3 +1,11 @@
-:host {
-  display: block;
+.user-card {
+  margin-bottom: 1rem;
+  cursor: pointer;
+
+  &__details {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.75rem;
+    color: #b0bec5;
+  }
 }

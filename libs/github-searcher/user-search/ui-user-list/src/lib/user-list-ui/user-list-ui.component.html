@@ -1,1 +1,7 @@
-<p>user-list-ui works!</p>
+<section class="user-list">
+  <github-searcher-user-list-item-ui
+    *ngFor="let user of userList; trackBy: trackById"
+    [user]="user"
+    (selectUser)="onSelectUser($event)"
+  ></github-searcher-user-list-item-ui>
+</section>

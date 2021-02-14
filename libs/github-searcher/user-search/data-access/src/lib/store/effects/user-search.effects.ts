@@ -4,6 +4,8 @@ import { Store } from '@ngrx/store';
 import { forkJoin, of } from 'rxjs';
 import { catchError, map, switchMap, withLatestFrom } from 'rxjs/operators';
 
+import { GithubUserResult } from '@github-searcher/github-searcher/user-search/domain';
+
 import { UserSearchService } from '../../services';
 import { UserSearchActions, UserSearchAPIActions } from '../actions';
 import { State } from '../reducers';
@@ -20,6 +22,14 @@ export class UserSearchEffects {
       switchMap(([, userSearch]) =>
         this.userSearchService.search(userSearch).pipe(
           switchMap(userPartialResult => {
+            if (userPartialResult.items.length === 0) {
+              return [
+                UserSearchAPIActions.searchGithubUsersSuccess({
+                  userSearchResult: userPartialResult as GithubUserResult,
+                }),
+              ];
+            }
+
             return forkJoin(
               userPartialResult.items.map(user =>
                 this.userSearchService.getByHandle(user.login)

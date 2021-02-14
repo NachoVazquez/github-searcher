@@ -1,0 +1,14 @@
+<section class="search-results">
+  <ng-container *ngIf="isSearching">
+    <mat-spinner class="search-results__spinner"></mat-spinner>
+  </ng-container>
+  <ng-container *ngIf="searchHasRan">
+    <ng-container *ngIf="isCurrentSearchSuccessful">
+      <github-searcher-user-list></github-searcher-user-list>
+      <github-searcher-search-pagination></github-searcher-search-pagination>
+    </ng-container>
+    <ng-container *ngIf="isCurrentSearchFailure">
+      <github-searcher-search-error-ui></github-searcher-search-error-ui>
+    </ng-container>
+  </ng-container>
+</section>

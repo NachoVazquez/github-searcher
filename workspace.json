@@ -71,9 +71,7 @@
         },
         "serve": {
           "executor": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "github-searcher:build"
-          },
+          "options": { "browserTarget": "github-searcher:build" },
           "configurations": {
             "production": {
               "browserTarget": "github-searcher:build:production"
@@ -82,9 +80,7 @@
         },
         "extract-i18n": {
           "executor": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "github-searcher:build"
-          }
+          "options": { "browserTarget": "github-searcher:build" }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -459,33 +455,6 @@
         }
       }
     },
-    "github-searcher-user-search-ui-search-results": {
-      "projectType": "library",
-      "root": "libs/github-searcher/user-search/ui-search-results",
-      "sourceRoot": "libs/github-searcher/user-search/ui-search-results/src",
-      "prefix": "github-searcher",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/github-searcher/user-search/ui-search-results/src/**/*.ts",
-              "libs/github-searcher/user-search/ui-search-results/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/github-searcher/user-search/ui-search-results"
-          ],
-          "options": {
-            "jestConfig": "libs/github-searcher/user-search/ui-search-results/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "github-searcher-user-search-ui-user-list": {
       "projectType": "library",
       "root": "libs/github-searcher/user-search/ui-user-list",
@@ -666,9 +635,7 @@
       }
     }
   },
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
+  "cli": { "defaultCollection": "@nrwl/angular" },
   "generators": {
     "@nrwl/angular:application": {
       "style": "scss",
