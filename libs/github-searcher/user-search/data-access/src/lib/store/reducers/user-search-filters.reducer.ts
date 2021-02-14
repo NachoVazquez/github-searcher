@@ -35,6 +35,14 @@ export const reducer = createReducer(
     searchFilters: { ...state.searchFilters, pagination },
   })),
 
+  on(UserSearchFiltersActions.resetPagination, state => ({
+    ...state,
+    searchFilters: {
+      ...state.searchFilters,
+      pagination: initialState.searchFilters.pagination,
+    },
+  })),
+
   on(UserSearchFiltersActions.patchSortBy, (state, { sortBy }) => ({
     ...state,
     searchFilters: { ...state.searchFilters, sort: sortBy },

@@ -1,1 +1,11 @@
-<p>search-pagination works!</p>
+<ng-container *ngIf="pagination$ | async as pagination">
+  <mat-paginator
+    class="search-paginator"
+    [length]="totalItems$ | async"
+    [pageSize]="pagination?.perPage"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    [pageIndex]="(pagination?.page || 1) - 1"
+    (page)="updatePagination($event)"
+  >
+  </mat-paginator>
+</ng-container>

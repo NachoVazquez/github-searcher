@@ -20,9 +20,6 @@ export class UserListComponent {
 
   constructor(private store: Store<State>) {
     this.userList$ = this.store.select(UserSearchSelectors.selectAllUsers);
-    this.userList$.subscribe(list => {
-      console.log(list);
-    });
   }
 
   selectUser(user: GithubUser): void {
