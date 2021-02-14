@@ -3,27 +3,39 @@ import { Observable } from 'rxjs';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Actions } from '@ngrx/effects';
 import { cold, hot } from '@nrwl/angular/testing';
+import { provideMockStore } from '@ngrx/store/testing';
+import { Action } from '@ngrx/store';
 
 import {
   createServiceGetByHandleResult,
   createServiceSearchResult,
   createUserSearchResult,
+  userSearchFilters,
 } from '@github-searcher/github-searcher/user-search/shared/utils-test';
 
 import { UserSearchService } from '../../services';
 import { UserSearchActions, UserSearchAPIActions } from '../actions';
+import { UserSearchFilterSelectors } from '../selectors';
 
 import { UserSearchEffects } from './user-search.effects';
 
 describe(UserSearchEffects.name, () => {
   let effects: UserSearchEffects;
   let userSearchService: UserSearchService;
-  let actions$: Observable<any>;
+  let actions$: Observable<Action>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
         UserSearchEffects,
+        provideMockStore({
+          selectors: [
+            {
+              selector: UserSearchFilterSelectors.selectUserSearchFilters,
+              value: userSearchFilters,
+            },
+          ],
+        }),
         provideMockActions(() => actions$),
         {
           provide: UserSearchService,
@@ -41,14 +53,7 @@ describe(UserSearchEffects.name, () => {
 
   describe('searchGithubUsers$', () => {
     it('should return a UserSearchAPIActions.searchGithubUsersSuccess with a list of users on success', () => {
-      const userSearch = {
-        name: 'Nacho Vazquez',
-        pagination: { page: 1, perPage: 10 },
-        userQuery: {},
-      };
-      const action = UserSearchActions.searchGithubUsers({
-        userSearch,
-      });
+      const action = UserSearchActions.searchGithubUsers();
       const result = createUserSearchResult();
       const resultSearch = createServiceSearchResult();
       const responseSearch = cold('-a|', { a: resultSearch });
@@ -67,7 +72,7 @@ describe(UserSearchEffects.name, () => {
 
       expect(effects.searchGithubUsers$).toBeObservable(expected);
       expect(userSearchService.search).toHaveBeenCalledTimes(1);
-      expect(userSearchService.search).toHaveBeenCalledWith(userSearch);
+      expect(userSearchService.search).toHaveBeenCalledWith(userSearchFilters);
       expect(userSearchService.getByHandle).toHaveBeenCalledTimes(2);
       expect(userSearchService.getByHandle).toHaveBeenCalledWith(
         'NachoVazquez'

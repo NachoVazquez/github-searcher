@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { GithubSearcherUserSearchUiSearchBarModule } from '@github-searcher/github-searcher/user-search/ui-search-bar';
@@ -5,7 +6,7 @@ import { GithubSearcherUserSearchUiSearchBarModule } from '@github-searcher/gith
 import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
-  imports: [GithubSearcherUserSearchUiSearchBarModule],
+  imports: [CommonModule, GithubSearcherUserSearchUiSearchBarModule],
   declarations: [SearchBarComponent],
   exports: [SearchBarComponent],
 })

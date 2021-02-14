@@ -1,1 +1,21 @@
-<p>search-bar-ui works!</p>
+<mat-card class="search-bar">
+  <mat-form-field class="search-bar__search-input">
+    <mat-label>Search Users</mat-label>
+    <input
+      type="search"
+      [ngModel]="nameFilter"
+      (change)="onUpdateNameFilter($event?.target?.value)"
+      matInput
+      placeholder="Ex. Nacho Vazquez"
+    />
+  </mat-form-field>
+
+  <button
+    (click)="onSearch()"
+    mat-mini-fab
+    color="warn"
+    aria-label="Search Github Users"
+  >
+    <mat-icon>search</mat-icon>
+  </button>
+</mat-card>

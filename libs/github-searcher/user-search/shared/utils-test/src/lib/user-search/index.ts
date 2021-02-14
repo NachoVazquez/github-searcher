@@ -53,3 +53,9 @@ export const createUserSearchResult = (): GithubUserResult => ({
   total_count: 100,
   items: userSearchItems,
 });
+
+export const userSearchFilters = {
+  name: 'Nacho Vazquez',
+  pagination: { page: 1, perPage: 10 },
+  userQuery: {},
+};
