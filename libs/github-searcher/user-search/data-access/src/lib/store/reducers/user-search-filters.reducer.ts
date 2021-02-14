@@ -14,7 +14,11 @@ export const initialState: State = {
   searchFilters: {
     name: '',
     pagination: { page: 1, perPage: 10 },
-    userQuery: {},
+    userQuery: {
+      location: '',
+      followers: '',
+      repositories: '',
+    },
   },
 };
 

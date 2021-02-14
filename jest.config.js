@@ -10,7 +10,6 @@ module.exports = {
     '<rootDir>/libs/github-searcher/user-search/feature-search-filters',
     '<rootDir>/libs/github-searcher/user-search/ui-search-filters',
     '<rootDir>/libs/github-searcher/core/ui-layout',
-    '<rootDir>/libs/github-searcher/user-search/ui-search-results',
     '<rootDir>/libs/github-searcher/user-search/feature-search-results',
     '<rootDir>/libs/github-searcher/user-search/feature-user-list',
     '<rootDir>/libs/github-searcher/user-search/ui-user-list',
